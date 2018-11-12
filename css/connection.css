@@ -1,0 +1,7 @@
+.col-lg-offset-5
+{
+display: flex;
+align-self: center;
+justify-content: center;
+background-color: yellow;
+}

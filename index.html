@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>登录界面</title>
+		<link rel="stylesheet" href="css/connection.css" />
+		<!--<script type="text/javascript" src="js/jquery-3.3.1.js"></script>-->
+		<!--<script type="text/javascript" src="js/bootstrap.js"></script>-->
+	</head>
+
+	<body>
+		<div class="col-lg-2 col-lg-offset-5" style="margin-top: 50px;background-image:url("../picture/bo.jpg")">
+		<form>
+
+			<div class="form-group">
+				<label for="exampleInputName">用户名</label>
+				<input style="height: 60px" type="name" class="form-control" id="text1" placeholder="Name">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">密码</label>
+				<input style="height: 60px" type="password" class="form-control" id="psw" placeholder="Password">
+			</div>
+			
+			<button type="button" class="btn btn-default" id="bt1" style="width: 90px;">登录</button>
+			<button type="button" class="btn btn-default" id="bt2" style="width: 200px;margin-left: 40px;">忘记密码</button>
+		</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+
+        var bt1 = document.getElementById("bt1");
+        var bt2 = document.getElementById("bt2");
+        //点击按钮
+        bt1.onclick = function () {
+            //通过ID拿值
+            var text1 = document.getElementById("text1").value;
+            //密码值
+            var psw = document.getElementById("psw").value;
+            if (text1 === "csh" && psw === 123456)
+            {
+                alert("成功登陆！");
+            }else if(isNull(text1) || isNull(psw))
+            {
+                alert("请重新输入！");
+            }else
+            {
+                alert("用户不存在或密码不正确！")
+            }
+        }
+        bt2.onclick = function () {
+			window.prompt("请输入新的密码：");
+
+        }
+        function isNull(value) {
+            if (typeof value =="undefined"||value==null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+	</script>
+
+</html>
